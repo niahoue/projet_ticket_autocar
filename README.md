@@ -1,2 +1,19 @@
 # projet_ticket_autocar
-site de reservation de ticket d'autocar avec nodeJs
+site de reservation de ticket d'autocar avec nodeJs, ejs,express et mongodb.
+ce permet aux utlisateurs de pouvoir  s'incrire et faire des reservations et permettre aux compagnies de pouvoir s'incrire et proposer des trajets et les heures et les tarifs correspondants.
+
+Interface pour les clients acheteurs (Recherche et réservation de trajets) :
+Créez une page web avec un formulaire de recherche de trajets. Ce formulaire devrait permettre aux clients de spécifier les critères de recherche tels que la ville de départ, la destination, la date, etc.
+Créez une route dans votre application Express qui gère la soumission du formulaire de recherche.
+Dans le contrôleur correspondant à cette route, utilisez les données soumises par le formulaire pour interroger la base de données et récupérer les trajets correspondants.
+Rendez une vue (template EJS par exemple) avec les résultats des trajets trouvés, permettant aux clients de sélectionner un trajet et de procéder à la réservation.
+Créez une autre route pour gérer la soumission du formulaire de réservation. Dans le contrôleur correspondant, enregistrez la réservation dans la base de données et affichez une confirmation à l'utilisateur.
+Interface pour les compagnies (Enregistrement et soumission de trajets et prix) :
+Créez une page web avec un formulaire d'enregistrement pour les compagnies. Ce formulaire devrait inclure les informations nécessaires pour créer un compte de compagnie, telles que le nom de la compagnie, l'adresse e-mail, le mot de passe, etc.
+Créez une route dans votre application Express pour gérer la soumission du formulaire d'enregistrement de compagnie.
+Dans le contrôleur correspondant, utilisez les données soumises pour créer un compte de compagnie dans la base de données en utilisant des mécanismes d'authentification appropriés (par exemple, en utilisant Passport.js).
+Une fois la compagnie enregistrée, créez une page de connexion pour les compagnies où elles peuvent saisir leurs informations d'identification.
+Créez une route pour gérer la soumission du formulaire de connexion de la compagnie. Dans le contrôleur correspondant, vérifiez les informations d'identification de la compagnie et redirigez-la vers l'interface de soumission des trajets et prix.
+Créez une page web avec un formulaire permettant aux compagnies de soumettre leurs trajets et prix. Ce formulaire devrait inclure les détails tels que la ville de départ, la destination, l'horaire, le prix, etc.
+Créez une route pour gérer la soumission du formulaire de soumission de trajet
+
