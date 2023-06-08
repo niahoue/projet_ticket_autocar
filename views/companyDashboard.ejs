@@ -1,0 +1,45 @@
+<!-- companyDashboard.ejs -->
+
+ <h1 class="text-center">Tableau de bord</h1>
+<p class="lead mb-3 ">Bienvenu  </p>
+<a href="/company/logout" class="btn btn-secondary">Déconnexion</a> 
+
+
+<div class="row mt5">
+  <div class="col-md-3 ">
+    <div class="card card-body">
+      <h3 class="card-title">Soumettre un trajet et un prix</h3>
+      <form action="/company/submit" method="post">
+        <div class="form-group">
+          <label for="company">Compagnie :</label>
+          <input type="text" name="company"required >
+        </div>
+        <div class=" form-group mt-3">
+          <label for="national">National</label>
+          <input type="checkbox" name="type" value="national" checked id="national" required>
+          <label for="international">International</label>
+          <input type="checkbox" name="type" value="international" id="international" >
+        </div>
+        <div class="form-group">
+          <label for="departure">ville de Départ :</label>
+          <input type="text" name="departure" id="departure" required>
+        </div>
+        <div class="form-group ">
+          <label for="destination">ville de Destination :</label>
+          <input type="text" name="destination" id="destination" required>
+        </div>
+        <div class="form-group mt-3">
+          <label for="time"> Heure de départ :</label>
+          <input type="time" name="departureTime" id="time" required>
+        </div>
+        <div class="form-group">
+          <label for="price">Prix :</label>
+          <input type="number" name="price" id="price" required>
+        </div>
+        <button type="submit" class="btn btn-primary mt-4">Soumettre</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+

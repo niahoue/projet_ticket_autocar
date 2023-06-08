@@ -1,0 +1,26 @@
+<form action="/bookings/submit" method="post">
+    <div class="text-center mb-2">
+      <label for="type">Type:</label>
+      <label for="national">National</label>
+      <input type="radio" name="type" value="national" checked id="national" required>
+      <label for="international">International</label>
+      <input type="radio" name="type" value="international" id="international" required>
+    </div>
+    <div class="text-center">
+      <input type="text" name="company" placeholder="Compagnie" required>
+      <input type="text" name="departure" placeholder="Départ" required>
+      <input type="text" name="destination" placeholder="Destination" required>
+      <input type="date" name="date" placeholder="Date de voyage" required>
+      <input type="time" name="time" placeholder="Heure de départ" required>
+      <input type="number" name="passengers" placeholder="Nombre de places" required>
+      <button type="submit" class="btn btn-primary">Réserver</button>
+    </div>
+    <div class="text-center mt-2">
+      <label for="oneway">Aller-simple</label>
+      <input type="radio" name="oneway" value="aller-simple" id="oneway" checked required>
+      <label for="return">Aller-retour</label>
+      <input type="radio" name="oneway" value="aller-retour" id="return" required>
+    </div>
+  </form>
+  
+  

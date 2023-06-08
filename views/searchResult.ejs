@@ -1,0 +1,19 @@
+<!-- search-results.ejs -->
+<div class="container">
+    <h1>Résultats de la recherche</h1>
+    <% if (trips.length > 0) { %>
+      <% trips.forEach((trip) => { %>
+        <div class="trip">
+          <h2><%= trip.company %></h2>
+          <p>Départ: <%= trip.departure %></p>
+          <p>Destination: <%= trip.destination %></p>
+          <p>Date: <%= trip.date.toDateString() %></p>
+          <p>Heure de départ: <%= trip.departureTime %></p>
+          <p>Prix: <%= trip.price %> EUR</p>
+        </div>
+      <% }); %>
+    <% } else { %>
+      <p>Aucun trajet trouvé.</p>
+    <% } %>
+  </div>
+  

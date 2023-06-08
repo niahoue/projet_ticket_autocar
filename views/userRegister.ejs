@@ -1,0 +1,56 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <h1 class="text-center mb-3">
+          <i class="fas fa-user-plus"></i> s'incrire
+        </h1>
+        <%- include('./partiels/messages') %>
+        <form action="/users/register" method="POST">
+          <div class="form-group mb-3">
+            <input
+              type="name"
+              id="name"
+              name="name"
+              class="form-control"
+              placeholder="Entrer Nom et Prénom"
+              value="<%= typeof name != 'undefined' ? name : '' %>"
+            />
+          </div>
+          <div class="form-group mb-3">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="Entrer Email"
+              value="<%= typeof email != 'undefined' ? email : '' %>"
+            />
+          </div>
+          <div class="form-group mb-3">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              placeholder="Mot de Pass"
+              value="<%= typeof password != 'undefined' ? password : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              id="password2"
+              name="password2"
+              class="form-control"
+              placeholder="Confirmer Mot de Pass"
+              value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block mt-4 ">
+            S'inscrire
+          </button>
+        </form>
+        <p class="lead mt-4">Avez-vous un compte? <a href="/users/login">Connectez-vous</a> - compte Compangnie ? <a href="/company/login">Par ici</a></p>
+      </div>
+    </div>
+  </div>

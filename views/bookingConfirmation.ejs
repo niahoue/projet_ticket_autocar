@@ -1,0 +1,20 @@
+<div class="container">
+    <h1 class="text-center">Réservation Confirmée</h1>
+    <div class="booking-details">
+      <p>Voici les détails de votre réservation :</p>
+      <ul>
+        <li><strong>Type :</strong> <%= booking.type %></li>
+        <li><strong>Compagnie :</strong> <%= booking.company %></li>
+        <li><strong>Départ :</strong> <%= booking.depart %></li>
+        <li><strong>Destination :</strong> <%= booking.destination %></li>
+        <li><strong>Date :</strong> <%= booking.date %></li>
+        <li><strong>Heure :</strong> <%= booking.time %></li>
+        <li><strong>Passagers :</strong> <%= booking.passengers %></li>
+        <li><strong>Aller simple :</strong> <%= booking.oneway ? 'Oui' : 'Non' %></li>
+        <li><strong>Prix total :</strong> <%= booking.total %> USD</li>
+      </ul>
+    </div>
+    <div class="text-center mt-4">
+      <a href="/payment" class="btn btn-primary">Payer</a>
+    </div>
+  </div>

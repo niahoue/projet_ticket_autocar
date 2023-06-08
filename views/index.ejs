@@ -1,0 +1,145 @@
+<div class="container-fluid">
+    <div class="form-container form_backgr ">
+      <form action="/bookings/submit" method="post">
+        <div class="text-center mb-2">
+         <label for="type" class="fs-2 text-primary">Type:</label>
+                  <label for="national" class="text-white fs-2">National</label>
+                   <input type="radio" name="type" value="national" checked id="national" required>
+                   <label for="international"class="text-white fs-2">International</label>
+                   <input type="radio" name="type" value="inter" id="ineternational" required>
+        </div>
+        <div class="text-center">
+         <input type="text" name="company" placeholder="companie" required class="p-2 rounded-3 border-0">
+         <input type="text" name="routes" placeholder="Départ" required class="p-2  rounded-3 border-0">
+         <input type="text" name="routes" placeholder="Destination" required class="p-2  rounded-3 border-0">
+         <input type="date" name="date" placeholder="Date of travel" required class="p-2  rounded-3 border-0">
+         <input type="time" name="time" placeholder="departure time" required class="p-2  rounded-3 border-0">
+         <input type="number" name="passengers" placeholder="Nbr de places" required class="p-2  rounded-3 border-0">
+         <button type="submit"class="btn btn-primary fs-4">reserver</button>
+        </div>
+        <div class="text-center mt-2">
+         <label for="oneway"class="text-white fs-2">Aller-simple</label>
+         <input type="radio" name="oneway" value="Aller-retour" id = "oneway" checked required>
+         <label for="return"class="text-white fs-2">Aller-retour</label>
+         <input type="radio" name="oneway" value="Aller-retour" id="return" required>
+        </div>
+       </form>
+    </div>
+    <div>
+      <div class="bann bg-primary">
+        <h2>Découvrez <span>nos Offres</span></h2>
+    </div>
+    <div class="main-content ">
+        <div class="main-card">
+            <div class="card">
+                <img src="/images/voyageur.jpg" alt="">
+            </div>
+            <p>Profitez de <span> -10% </span>sur tous les Horaires et Tarifs  pour vos tickets Aller-Retour partout </p>
+            <button class="card-btn btn btn-primary"> J'achète</button>
+        </div>
+        <div class="main-card">
+            <div class="card">
+                <img src="/images/famille.jpg" alt="">
+            </div>
+            <p>Voyagez en famille c’est plus simple avec . Profitez de <span> -10% </span>sur vos voyages en famille*.</p>
+            <button class="card-btn btn btn-primary"> J'achète</button>
+        </div>
+        <div class="main-card">
+            <div class="card">
+                <img src="/images/seul.jpg" alt="">
+            </div>
+            <p>Envie de voyager ? Découvrez nos meilleures offres du moment.</p>
+            <button class="card-btn btn btn-primary"> Plus de details>>></button>
+        </div>
+    </div>
+    <section class="testimonials">
+      <h2 class="text-center mt-2 testimonial-title bg-primary">Ce que disent nos utilisateurs</h2>
+      <div class="row">
+        <div class="col-md-6 ">
+          <blockquote class="testimonial d-flex align-items-center ">
+              <img src="/images/deborah.jpg" class=" me-3" alt="Gbadouo Deborah">
+            <p><i>"</i> J'utilise AdjaméGare.com depuis quelques mois maintenant et j'en suis très content.
+               Il est facile à utiliser et il m'a aidé à trouver des tickets a des tarifs promotionnels .
+                Je le recommanderais certainement à d'autres.<br><i>"</i>
+                 <br>
+                <strong>Gbadouo Deborah</strong><br>
+                <span class="stars">★★★★★</span>
+             </p> 
+          </blockquote>
+        </div>
+        <div class="col-md-6">
+          <blockquote class="testimonial d-flex align-items-center">
+           
+              <img src="/images/ibrahim.jpg" class="me-3" alt="Kone Ibrahim">
+              
+            <p><i>"</i> J'ai récemment utilisé AdjaméGare.com pour réserver un billet de bus pour san-pedro.
+               J'ai été très impressionné par la facilité d'utilisation du site et les prix avantageux que j'ai trouvés.
+                J'ai également pu annuler mon billet sans aucun problème, ce qui a été très utile. 
+                Je recommanderais sans hésiter AdjaméGare.com à tous ceux qui souhaitent réserver un billet d'autocar.<br><i>"</i>
+                <br>
+                <strong>Kone Ibrahim</strong><br>
+                <span class="stars">★★★★★</span>
+            </p>
+            
+          </blockquote>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <blockquote class="testimonial d-flex align-items-center">
+              <img src="/images/anne.jpg" class="me-3" alt="Anne Eudoxie N">
+            <p><i>"</i>J'ai utilisé ce site plusieurs fois pour acheter des billets d'autocar pour ma famille et j'ai toujours été satisfait du service.
+               Les billets sont toujours à l'heure et les prix sont très raisonnables. 
+              Je recommanderais certainement ce site à tous ceux qui souhaitent acheter des billets de bus.<br><i>"</i>
+              <br>
+              <strong>Anne Eudoxie N.</strong><br>
+              <span class="stars">★★★★★</span>
+            </p>
+            
+          </blockquote>
+        </div>
+        <div class="col-md-6">
+          <blockquote class="testimonial d-flex align-items-center">
+              <img src="/images/marcel.jpg" class="me-3" alt="Marcel Kouassi M">
+            <p><i>"</i>Je cherchais un billet d'autocar de dernière minute pour une conférence et j'ai trouvé ce site.
+               J'ai pu acheter un billet à un prix avantageux et le billet est arrivé dans ma boîte de réception en quelques minutes.
+               J'ai été très satisfait du service et j'utiliserais certainement ce site à nouveau.<br><i>"</i>
+              <br>
+              <strong>Marcel Kouassi M.</strong><br>
+              <span class="stars">★★★★★</span>
+            </p>
+            
+          </blockquote>
+        </div>
+      </div>
+    </section>
+    <div class="confort bg-primary">
+        <h2>Profitez de nos services à bord</h2>
+        <img src="" alt="">
+    </div>
+    <div class="main-confort mt-3"> 
+        <div class="confort-icons">
+            <div class="icons">
+                <img src="/images/confort.png" alt="">
+                <h3>CONFORT</h3>
+                <p>Siège confortable et inclinable avec espace pour les jambes</p>
+            </div>
+            <div class="icons">
+                <img src="/images/wifi.png" alt="">
+                <h3>wifi</h3>
+                <p>Wifi gratuit pour rester connecter durant le voyage</p>
+            </div>
+            <div class="icons">
+                <img src="/images/usb.png" alt="">
+                <h3>usb</h3>
+                <p>Port de recharge USB adapté à tous types d’appareil</p>
+            </div>
+            <div class="icons">
+                <img src="/images/multimedia.png" alt="">
+                <h3>divertissement</h3>
+                <p>Plateforme de divertissement connectée à votre appareil</p>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>

@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>Recherche de trajets</h1>
+    <form action="/trips/search" method="post">
+      <div>
+        <label for="departure">Ville de départ:</label>
+        <input type="text" name="departure" id="departure" required>
+      </div>
+      <div>
+        <label for="destination">Destination:</label>
+        <input type="text" name="destination" id="destination" required>
+      </div>
+      <div>
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="date" required>
+      </div>
+      <div>
+        <label for="company">Compagnie:</label>
+        <input type="text" name="company" id="company">
+      </div>
+      <div>
+        <label for="departureTime">Heure de départ:</label>
+        <input type="time" name="departureTime" id="departureTime">
+      </div>
+      <button type="submit">Rechercher</button>
+    </form>
+</div>

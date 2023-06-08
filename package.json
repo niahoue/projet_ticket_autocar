@@ -1,0 +1,40 @@
+{
+  "name": "adjamegare_dev",
+  "version": "1.0.0",
+  "description": "site for booking and purchasing travel tickets in ivory coast - coach rental for your journeys",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "travel",
+    "cote",
+    "d'ivoire",
+    "buy-ticket",
+    "rent-car",
+    "travel-in-bus",
+    "travel-africa",
+    "abidjan",
+    "abidjan-voyage",
+    "tourisme"
+  ],
+  "author": "niahoue",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "debug": "^4.3.4",
+    "dotenv": "^16.1.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.2.2",
+    "nodemailer": "^6.9.3",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

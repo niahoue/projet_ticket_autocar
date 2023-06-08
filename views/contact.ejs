@@ -1,0 +1,27 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center mb-3"><i class="fas fa-envelope"></i>Nous contacter </h1>
+      <p class="text-center">Veuillez utiliser le formulaire ci-dessous pour nous contacter.</p>
+
+      <form  method="post" action="/contact/submit">
+        <div class="form-group mb-3">
+            <input type="name" name="name" placeholder="votre nom et prénom"required class="p-2 rounded-3 w-100">
+        </div>
+        <div class="form-group mb-3">
+           <input type="email" name="email" placeholder="votre Email" required class="p-2 rounded-3 w-100">
+        </div>
+        <div class="form-group mb-3">
+            <input type="tel" name="phone" placeholder=" votre numeo de telephone"required class="p-2 rounded-3 w-100">
+        </div>
+        <div class="form-group mb-3">
+          <textarea name="message" rows="5" cols="50" placeholder="votre message" required class="p-2 rounded-3 w-100"></textarea>
+
+        </div>
+        <div class="form-group mb-3 text-center">
+          <input type="submit" value="Send Message">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

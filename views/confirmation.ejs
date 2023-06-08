@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Confirmation de réservation</h1>
+    <p>Votre réservation a été enregistrée avec succès :</p>
+    <ul>
+      <li>Compagnie : <%= reservation.companyId %></li>
+      <li>Départ : <%= reservation.departure %></li>
+      <li>Destination : <%= reservation.destination %></li>
+      <li>Date : <%= reservation.date.toDateString() %></li>
+      <li>Heure : <%= reservation.time %></li>
+      <li>Passagers : <%= reservation.passengers %></li>
+    </ul>
+    <p>Merci de votre réservation !</p>
+  </div>
+  
