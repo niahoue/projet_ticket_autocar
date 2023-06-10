@@ -1,0 +1,21 @@
+<h1>Modifier un trajet</h1>
+
+<% if (message) { %>
+  <p><%= message %></p>
+<% } %>
+
+<form action="/company/trips/<%= trip._id %>/edit" method="POST">
+  <label for="departure">Départ</label>
+  <input type="text" id="departure" name="departure" value="<%= trip.departure %>" required>
+
+  <label for="arrival">Arrivée</label>
+  <input type="text" id="arrival" name="arrival" value="<%= trip.arrival %>" required>
+
+  <label for="time">Heure(s) de départ</label>
+  <input type="text" id="time" name="time" value="<%= trip.time.join(', ') %>" required>
+
+  <label for="price">Prix</label>
+  <input type="number" id="price" name="price" value="<%= trip.price %>" required>
+
+  <button type="submit">Enregistrer</button>
+</form>

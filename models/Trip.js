@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 
 const TripSchema = new mongoose.Schema({
   company: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Company',
     required: true
   },
   type: {
@@ -26,7 +27,9 @@ const TripSchema = new mongoose.Schema({
         },
         time: {
           type: Array,
-          of: String,
+          items: {
+            type: String
+          },
           required: true
         },
         price: {
@@ -41,4 +44,3 @@ const TripSchema = new mongoose.Schema({
 const Trip = mongoose.model('Trip', TripSchema);
 
 module.exports = Trip;
-

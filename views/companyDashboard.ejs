@@ -1,7 +1,7 @@
 <!-- companyDashboard.ejs -->
 
  <h1 class="text-center">Tableau de bord</h1>
-<p class="lead mb-3 ">Bienvenu  </p>
+<p class="lead mb-3 ">Bienvenu </p>
 <a href="/company/logout" class="btn btn-secondary">Déconnexion</a> 
 
 
@@ -9,7 +9,7 @@
   <div class="col-md-3 ">
     <div class="card card-body">
       <h3 class="card-title">Soumettre un trajet et un prix</h3>
-      <form action="/company/submit" method="post">
+      <form action="/company/trips/add" method="post">
         <div class="form-group">
           <label for="company">Compagnie :</label>
           <input type="text" name="company"required >

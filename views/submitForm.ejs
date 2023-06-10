@@ -2,7 +2,12 @@
 
 <div class="container">
     <h1>Soumettre un trajet et un prix</h1>
-    <form action="/company/submit" method="post">
+    
+    <% if (error) { %>
+      <p><%= error %></p>
+    <% } %>
+
+    <form action="/company/trips/add" method="post">
       <div class="form-group">
         <label for="departure">Départ :</label>
         <input type="text" name="departure" id="departure" required>

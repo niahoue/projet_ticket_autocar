@@ -44,22 +44,19 @@ exports.postContactForm = (req,res,next) =>{
   });
 };
 
-
-
 exports.saveMessage = async (req, res) => {
   const { name, email, phone, message } = req.body;
-  // Créer un nouveau message à enregistrer dans la base de données
-  const newMessage = new Message({
+  const messages = new Message({
     name,
     email,
     phone,
-    message
+    message,
+    createdAt:new Date()
   });
 
   try {
-    // Enregistrer le message dans la base de données
-   await newMessage.save();
-    // Rediriger l'utilisateur vers une page de confirmation ou afficher un message de succès
+ 
+   await messages.save();
     res.render('contact-success', { title: 'Message envoyé', name });
   } catch (error) {
     console.log(error);

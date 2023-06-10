@@ -1,5 +1,6 @@
 const User = require('../models/User');
-const Ticket = require('../models/Ticket')
+const Trip= require('../models/Trip')
+const Booking = require('../models/Booking')
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
 
@@ -11,12 +12,14 @@ exports.login = (req,res) =>{
 }
 //Gestion de la connexion d'un utilisateur.
 exports.loginPost = async (req,res,next) => {
-   await  passport.authenticate('local',{
+  
+      await  passport.authenticate('local',{
         successRedirect:'/users/dashboard',
         failureRedirect:'/users/login',
         failureFlash:true
         })(req,res,next);
-        }
+    
+   }
 
 //Gestion de l'inscription d'un utilisateur.
 exports.getRegister = (req, res) => {
@@ -115,4 +118,70 @@ exports.dashboard =  (req, res) => {
    
    })
   };
-  
+ ///////////////////////////////////////////////////////////////////////////////////
+ exports.homepage = (req,res)=>{
+  res.render('booking',{ title: 'Réservation de billet de voyage' })
+};
+
+
+exports.createBooking = async (req, res) => {
+const { type, company, depart, destination, date, time, passengers, oneway } = req.body;
+
+try {
+  const trip = await Trip.findOne({
+    type:type,
+    company:company._id,
+    'routes.departure': depart,
+    'routes.destination': destination,
+    date:date,
+    time:time,
+    passengers:passengers,
+    oneway:oneway
+  });
+
+  if (trip) {
+    const totalPrice = trip.routes[0].price * passengers; // Calcul du prix total
+
+    const booking = new Booking({
+      userId: req.user.id, // ID de l'utilisateur actuellement connecté
+      tripId: trip._id,
+      type,
+      company,
+      depart,
+      destination,
+      date,
+      time,
+      passengers,
+      oneway,
+      totalPrice
+    });
+
+    await booking.save();
+
+    // Rediriger l'utilisateur vers une page de confirmation ou afficher un message de succès
+    res.redirect(`/users/booking/confirmation/${booking._id}`)
+  } else {
+    res.render('booking-error', { title: 'Erreur de réservation', message: 'Impossible de trouver le trajet correspondant' });
+  }
+} catch (error) {
+  console.log(error);
+  res.render('booking-error', { title: 'Erreur de réservation', message: 'Une erreur s\'est produite lors de la création de la réservation' });
+}
+};
+
+// Display the booking confirmation page
+exports.showConfirmationPage = async (req, res) => {
+try {
+  // Retrieve the booking details from the database
+  const booking = await Booking.findById(req.params.bookingId)
+    .populate('tripId')
+    .exec();
+
+  // Render the confirmation page with the booking details
+  res.render('bookingConfirmation', { booking });
+} catch (error) {
+  // Handle error and display an appropriate message
+  console.error(error);
+  res.status(500).send('An error occurred while retrieving the booking details');
+}
+};

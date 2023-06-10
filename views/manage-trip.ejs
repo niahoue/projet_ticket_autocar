@@ -1,0 +1,17 @@
+<h1>Gérer les trajets</h1>
+<% if (trips.length === 0) { %>
+  <p>Aucun trajet trouvé.</p>
+<% } else { %>
+  <ul>
+    <% trips.forEach((trip) => { %>
+      <li>
+        <p>Départ : <%= trip.departure %></p>
+        <p>Destination : <%= trip.destination %></p>
+        <p>Heure de départ : <%= trip.departureTime %></p>
+        <p>Prix : <%= trip.price %></p>
+        <a href="/company/trips/edit/<%= trip._id %>">Modifier</a>
+        <a href="/company/trips/delete/<%= trip._id %>">Supprimer</a>
+      </li>
+    <% }) %>
+  </ul>
+<% } %>

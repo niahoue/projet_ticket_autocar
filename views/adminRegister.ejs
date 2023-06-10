@@ -1,0 +1,23 @@
+<h1>Inscription Administrateur</h1>
+
+<form action="/admin/register" method="POST">
+  <div>
+    <label for="username">Nom d'utilisateur :</label>
+    <input type="text" name="username" id="username" required>
+  </div>
+  <div>
+    <label for="email">E-mail :</label>
+    <input type="email" name="email" id="email" required>
+  </div>
+  <div>
+    <label for="password">Mot de passe :</label>
+    <input type="password" name="password" id="password" required>
+  </div>
+  <div>
+    <label for="registrationKey">Clé d'inscription :</label>
+    <input type="text" name="registrationKey" id="registrationKey" required>
+  </div>
+  <button type="submit">S'inscrire</button>
+</form>
+<p>Pas de Compte ? <a href="/admin/login">Se connecter</a></p>
+

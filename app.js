@@ -58,19 +58,17 @@ app.use((req,res,next)=>{
 const routes = require('./routes/index');
 const userRoute = require('./routes/userRoute');
 const companyRoute = require('./routes/companyRoute');
-const tripRoute = require('./routes/tripRoute');
-const bookingRoute = require('./routes/bookingRoute');
 const contactRoute = require('./routes/contactRoute')
 const locationRoute = require('./routes/locationRoute');
+const admin = require('./routes/adminRoute')
 
 //middlewares des routes
 app.use('/',routes);
 app.use('/users',userRoute);
 app.use('/company',companyRoute);
-app.use('/trip',tripRoute);
-app.use('/bookings',bookingRoute);
 app.use('/contact',contactRoute);
 app.use('/location',locationRoute);
+app.use('/admin',admin);
 
 
 
